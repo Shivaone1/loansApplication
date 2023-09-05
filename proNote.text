@@ -1,0 +1,80 @@
+1:- xampp-windows-x64-8.0.19-0-VS16-installer
+2:- Composer-Setup.exe
+3:- Composer update
+4:- php artisan storage:link (Show Storage showing image)
+5:- npm also install with run dev
+for storage image create commond
+php artisan storage:link
+--------- Incase Not Show Image--------
+cd public
+rm storage
+cd ..
+php artisan storage:link
+----------------------------
+php artisan route:cache
+php artisan optimize
+----------------------------------
+4:- php artisan config:clear
+5:- php artisan optimize
+6:- composer Upate
+php artisan route:list (Api creating time)
+
+
+Work Flow 
+
+
+for storage image create commond
+php artisan storage:link
+--------- Incase Not Show Image--------
+cd public
+rm storage
+cd ..
+php artisan storage:link
+----------------------------
+php artisan route:cache
+php artisan optimize
+06-10-2022
+----------
+1->Approved front page with controller
+2->loan front page with controller
+
+
+08-11-2022
+---------------
+<select name="cust_gender" id="cust_gender" class="form-control Rounded">
+    <option value="{{ $c->cust_gender}}" @if (old('cust_gender')=="cust_gender" ) {{ 'selected' }} @endif>{{ $c->cust_gender}}</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="other">Other</option>
+</select>
+----------------------------------
+<input type="text" class="form-control" id="cust_date_of_birth" name="cust_date_of_birth" value="{{ $c->cust_date_of_birth }} : {{ (date('Y') - date('Y',strtotime($c->cust_date_of_birth))) }}"
+                    disabled>
+------------------------------------
+{{ date('d,M-Y Ha:s',strtotime($c->created_at))}}
+--------------------------------------------------
+ $filename = '';
+        if($request->hasFile('cust_profile_pic')){
+            $filename = time(). '_' .$request->file('cust_profile_pic')->getClientOriginalName();
+            $path = $request->file('cust_profile_pic')->storeAs('customer',$filename,'public');
+            $data["cust_profile_pic"]='/storage/'.$path;
+        }
+-----------------------------
+
+https://www.basantfinance.com/admin/login
+prakritijain2806@gmail.com
+basantfinance.com
+
+------------------
+crm.coveryou.in
+U:-Admin@coveryou.in
+P:-1-8
+
+php artisan cache:clear
+
+        "[A-Z]{5}[0-9]{4}[A-Z]{1}" -> for pan Validation
+
+        "[[0-9]{9}]" -> for mobile Number Validation
+        
+        "[0-9]{11}" -> for Aadhar Validation 
+
